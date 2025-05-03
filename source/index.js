@@ -17,6 +17,11 @@ switch(scelta)
         const autore = prompt("Autore: ");
         const genere = prompt("Genere: ");
         const isbn = prompt("ISBN: ");
+        if (!titolo || !autore || !genere || !isbn)
+        {
+            console.log("Tutti i campi sono obbligatori.");
+            break;
+        }else
         libreria.push(f.aggiungiLibro(titolo,autore,genere,isbn));
         break;
 
@@ -27,6 +32,10 @@ switch(scelta)
     
     case "3":
         f.visualizzaLibreria(libreria);
+        break;
+
+    case "0":
+        console.log("Sei uscito dal programma!");
         break;
 
     default:

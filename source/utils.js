@@ -18,6 +18,21 @@ export function rimuoviLibro(libreria, isbn)
     console.log(libreria);
 }
 
-export const visualizzaLibreria =(libreria)=>{
-    console.log(libreria);
+export function visualizzaLibreria(libreria)
+{
+    if (libreria.length === 0)
+    {
+        console.log("La libreria è vuota.");
+        return;
+    }
+
+    for (let i=0; i<libreria.length;i++)
+    {
+        const libro=libreria[i];
+        console.log(`\nLibro ${i+1}:`);
+        console.log(`Titolo: ${libro.titolo}`);
+        console.log(`Autore: ${libro.autore}`);
+        console.log(`Genere: ${libro.genere}`);
+        console.log(`ISBN: ${libro.isbn}`);
+    }
 }
