@@ -6,7 +6,6 @@ let scelta;
 let libreria=[];
 
 do{
-
 console.log("\nMenu\n 1-Aggiungi Libro.\n 2-Rimuovi.\n 3-Visualizza libreria. \n 0-Esci");
     scelta=prompt("Inserisci scelta: ");
 
@@ -17,10 +16,17 @@ switch(scelta)
         const autore = prompt("Autore: ");
         const genere = prompt("Genere: ");
         const isbn = prompt("ISBN: ");
+
+        const esistenteISBN=libreria.find(libro=>libro.isbn===isbn);
+
         if (!titolo || !autore || !genere || !isbn)
         {
             console.log("Tutti i campi sono obbligatori.");
             break;
+        }else
+        if(esistenteISBN)
+        {
+            console.log("ISBN già presente nella libreria!Libro non aggiunto")
         }else
         libreria.push(f.aggiungiLibro(titolo,autore,genere,isbn));
         break;
@@ -40,6 +46,5 @@ switch(scelta)
 
     default:
         console.log("Scelta non valida!");
-
-}
-}while(scelta!=0);
+    }
+}while(scelta!=0)

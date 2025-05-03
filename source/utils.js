@@ -9,20 +9,20 @@ export function rimuoviLibro(libreria, isbn)
 {
     let isbnlib = libreria.find(libro => libro.isbn == isbn);
     let i = libreria.findIndex(libro => libro.isbn == isbn);
-    if(isbnlib.isbn == isbn){
+    if(isbnlib.isbn == isbn)
+    {
         libreria.splice(i,1);
         console.log("Libro rimosso con successo!");
     }
     else
         console.log("Libro non trovato");
-    console.log(libreria);
 }
 
 export function visualizzaLibreria(libreria)
 {
-    if (libreria.length === 0)
+    if (libreria.length===0)
     {
-        console.log("La libreria è vuota.");
+        console.log("La libreria è vuota");
         return;
     }
 
