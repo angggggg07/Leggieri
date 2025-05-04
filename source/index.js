@@ -59,7 +59,7 @@ switch(scelta)
             console.log("Tutti i campi sono obbligatori.");
             break;
         }else
-        if(f.ControlloISBN(libreria,isbn))
+        if(f.controlloISBN(libreria,isbn))
         {
             console.log("ISBN già presente nella libreria!Libro non aggiunto")
         }else
