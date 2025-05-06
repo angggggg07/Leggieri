@@ -31,15 +31,18 @@ export function controlloISBN(libreria,isbn)
 */
 export function rimuoviLibro(libreria, isbn)
 {
-    let isbnlib = libreria.find(libro => libro.isbn == isbn);
-    let i = libreria.findIndex(libro => libro.isbn == isbn);
-    if(isbnlib.isbn==isbn)
-    {
-        libreria.splice(i,1);
-        console.log("Libro rimosso con successo!");
-    }
-    else
-        console.log("Libro non trovato");
+    let isbnlib=libreria.find(libro => libro.isbn == isbn);
+    let i=libreria.findIndex(libro => libro.isbn == isbn);
+    if(isbnlib!=null)
+        if(isbnlib.isbn==isbn)
+        {
+            libreria.splice(i,1);
+            console.log("Libro rimosso con successo!");
+        }
+        else
+            console.log("Libro non trovato");
+    else   
+        console.log("Libro non presente in libreria");
 }
 
 
