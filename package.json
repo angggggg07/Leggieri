@@ -1,0 +1,24 @@
+{
+  "name": "leggieri",
+  "version": "1.0.0",
+  "description": "PROGETTO GESTIONE BIBLIOTECA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angggggg07/Leggieri.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angggggg07/Leggieri/issues"
+  },
+  "homepage": "https://github.com/angggggg07/Leggieri#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
